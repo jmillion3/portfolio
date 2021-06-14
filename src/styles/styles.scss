@@ -1,0 +1,33 @@
+@import './Code';
+@import './Contact';
+@import './Footer';
+@import './Header';
+@import './Home';
+@import './Resume';
+
+body {
+	// ! Background
+	background-image: url("./../components/Home/Background.jpeg");
+	background-color: grey;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: local;
+
+	// ! Font
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+}
+
+.routes {
+	// margin-left: 100px;
+	height: 83vh;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.685);
+}

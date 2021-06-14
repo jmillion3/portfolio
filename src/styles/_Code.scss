@@ -1,0 +1,28 @@
+.code {
+	height: 87vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	// align-items: center;
+}
+
+.code h1 {
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.code img {
+	height: 20vh;
+}
+
+.sweeet {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.hevy {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
