@@ -105,6 +105,10 @@
   font-size: 40px;
 }
 
+.resume img {
+  height: 70vh;
+}
+
 body {
   background-image: url("./../components/Home/Background.jpeg");
   background-color: grey;
