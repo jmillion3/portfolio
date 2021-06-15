@@ -1,4 +1,31 @@
 .home h1 {
-    color: red;
+	color: red;
 	font-size: 40px;
+}
+
+.team {
+	display: flex;
+	justify-content: space-around;
+
+	div {
+		width: 30vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	img {
+		height: 15vh;
+		border-radius: 10%;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin: 10px;
+	}
+
+	p {
+		font-size: 20px;
+	}
 }
