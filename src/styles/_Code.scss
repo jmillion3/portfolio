@@ -4,15 +4,25 @@
 	flex-direction: column;
 	justify-content: space-around;
 	// align-items: center;
+	dl {
+		width: 50vw;
+		box-sizing: border-box;
+		padding: 100px;
+	}
+
+	a {
+		width: 50vw;
+	}
+
+	img {
+		height: 30vh;
+		width: 25vw;
+	}
 }
 
 .code h1 {
 	font-size: 50px;
 	text-transform: uppercase;
-}
-
-.code img {
-	height: 20vh;
 }
 
 .sweeet {

@@ -13,7 +13,7 @@ const Code = () => {
                 <dd>-postgreSQL</dd>
                 <dd>-SASS</dd>
             </dl>
-            <a href="http://www.hevycreative.com/"><img src={hevy} alt="Hevy homepage"></img></a>
+            <a href="https://sweeetscandy.com/#/"><img src={sweeet} alt="Sweeet homepage"></img></a>
         </div>
         <div className="hevy">
             <dl>
@@ -21,7 +21,7 @@ const Code = () => {
                 <dd>-HTML</dd>
                 <dd>-CSS</dd>
             </dl>
-            <a href="https://sweeetscandy.com/#/"><img src={sweeet} alt="Sweeet homepage"></img></a>
+            <a href="http://www.hevycreative.com/"><img src={hevy} alt="Hevy homepage"></img></a>
         </div>
     </div>
 }
