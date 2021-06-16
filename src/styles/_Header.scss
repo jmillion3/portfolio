@@ -2,11 +2,13 @@
 .header {
 	background-color: rgb(0, 0, 0);
 	height: 12vh;
+	width: 100vw;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	// align-items: center;
+	position: fixed;
 	.links {
 		display: flex;
 		align-items: center;

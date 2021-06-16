@@ -2,7 +2,9 @@
 .footer {
 	background-color: rgb(0, 0, 0);
 	height: 5vh;
-	position: relative;
+	width: 100vw;
+	position: fixed;
+	bottom: 0%;
 
 	display: flex;
 	justify-content: flex-start;

@@ -1,9 +1,15 @@
 .code {
-	height: 87vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	// align-items: center;
+	// justify-content: space-around;
+	align-items: center;
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	dl {
 		width: 50vw;
 		box-sizing: border-box;
@@ -11,6 +17,8 @@
 	}
 
 	a {
+		display: flex;
+		justify-content: center;
 		width: 50vw;
 	}
 
@@ -25,14 +33,14 @@
 	text-transform: uppercase;
 }
 
-.sweeet {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
+// .sweeet {
+// 	display: flex;
+// 	justify-content: space-around;
+// 	align-items: center;
+// }
 
-.hevy {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
+// .hevy {
+// 	display: flex;
+// 	justify-content: flex-start;
+// 	align-items: center;
+// }
