@@ -22,13 +22,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px;
 }
 
 .code dl {
   width: 50vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 100px;
+  padding: 100px 400px;
 }
 
 .code a {
@@ -94,6 +95,7 @@
   background-color: black;
   height: 12vh;
   width: 100vw;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,6 +143,23 @@
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 10px;
+}
+
+.home {
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home h1 {
@@ -193,21 +212,27 @@
 
 body {
   background-image: url("./../components/Home/Background.jpeg");
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.356);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: local;
+  background-attachment: fixed;
   font-family: 'Courier New', Courier, monospace;
   font-size: 30px;
   font-weight: 700;
   color: white;
 }
 
+.App {
+  position: absolute;
+}
+
 .routes {
+  margin: 12vh 0 0 0;
+  position: absolute;
   height: 83vh;
-  width: auto;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,6 +242,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.685);
 }
 /*# sourceMappingURL=styles.css.map */

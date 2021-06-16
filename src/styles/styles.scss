@@ -8,12 +8,12 @@
 body {
 	// ! Background
 	background-image: url("./../components/Home/Background.jpeg");
-	background-color: grey;
+	background-color: rgba(128, 128, 128, 0.356);
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: local;
+	background-attachment: fixed;
 
 	// ! Font
 	font-family: 'Courier New', Courier, monospace;
@@ -22,13 +22,18 @@ body {
 	color: white;
 }
 
+.App {
+	position: absolute;
+}
+
 .routes {
-	// margin-left: 100px;
-	// position: relative;
+	margin: 12vh 0 0 0;
+	// z-index: -1;
+	position: absolute;
 	height: 83vh;
-	width: auto;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.685);
+	// background-color: rgba(0, 0, 0, 0.685);
 }

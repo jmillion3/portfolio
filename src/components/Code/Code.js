@@ -25,6 +25,7 @@ const Code = () => {
                 <dd>-express</dd>
                 <dd>-axios</dd>
                 <dd>-Node.js</dd>
+                <dd>-SASS</dd>
             </dl>
             <a href="https://github.com/jmillion3/noDB"><img src={screen} alt="Screen Time"></img></a>
         </div>
