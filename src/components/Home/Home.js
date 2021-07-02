@@ -2,10 +2,12 @@ import React from 'react';
 import designer from '../Home/designer.jpg';
 import frontend from '../Home/frontend.jpg';
 import backend from '../Home/backended.jpg';
+import imac from '../Home/imac.jpg';
 
 const Home = () => {
     return <div className="home">
-        <h1>Hello, World!</h1>
+        <h1 className="intro">Hello, World! My name is Josh. <br></br>Need help building your website?</h1>
+        <img src={imac} alt="Imac Hevy" className="imac"></img>
         {/* <p>Welcome to my portfolio. My name is Josh Miller. I am a Front End Developer based out of Salt Lake City, UT.</p> */}
         <p>Meet the team</p>
         <div className="team">

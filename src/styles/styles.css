@@ -1,5 +1,6 @@
 .code {
   height: 100%;
+  width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,9 +11,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* On screens that are 992px or less, set the background color to olive */
+  /* On screens that are 600px or less, set the background color to olive */
 }
 
 .code div {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,29 +26,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px;
-}
-
-.code dl {
-  width: 50vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 100px 400px;
-}
-
-.code a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50vw;
+  margin: 5px;
+  padding: 20px;
 }
 
 .code img {
-  height: 30vh;
-  width: 25vw;
+  height: auto;
+  width: 35vw;
+  border-radius: 1%;
 }
 
 .code h1 {
@@ -52,8 +41,7 @@
   text-transform: uppercase;
 }
 
-.contact address {
-  height: 100px;
+.code .details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,11 +49,126 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.code .details h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.code .details p {
+  color: #585858;
+}
+
+.code .details .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 992px) {
+  .code div {
+    padding: 10px;
+  }
+  .code .details h2 {
+    font-size: 30px;
+  }
+  .code .details p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .code h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .code div {
+    padding: 5px;
+  }
+  .code .details h2 {
+    font-size: 25px;
+  }
+  .code .details p {
+    font-size: 15px;
+  }
+}
+
+.contact {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.479);
+  padding: 50px;
 }
 
 .contact a {
   color: white;
   margin: 10px;
+}
+
+.contact .contact-form {
+  height: 30vh;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-form * {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: black;
 }
 
 .footer {
@@ -92,21 +195,21 @@
 }
 
 .header {
-  background-color: black;
-  height: 12vh;
+  height: 9vh;
   width: 100vw;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
+  -webkit-box-shadow: -10px -10px 15px gray;
+          box-shadow: -10px -10px 15px gray;
 }
 
 .header .links {
@@ -118,12 +221,19 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 35vw;
+}
+
+.header .links span {
+  background-color: black;
+  color: white;
+  padding: 10px;
 }
 
 .header a {
-  font-size: 30px;
-  font-weight: 800;
-  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
 }
 
 .header img {
@@ -132,21 +242,80 @@
   border-radius: 50%;
 }
 
-.logo {
+.header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .logo p {
+  font-size: 40px;
+}
+
+.header .hamburger {
+  display: none;
+  padding-right: 30px;
+  height: 5vh;
+  border-radius: 0;
+}
+
+.header .mobile-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  right: 0;
+  top: 9vh;
+  padding-right: 30px;
+  height: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.952);
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.header .mobile-links a {
+  color: white;
+}
+
+.header .mobile-links-show {
+  height: 15vh;
+}
+
+@media screen and (max-width: 900px) {
+  .header .hamburger {
+    display: inline-block;
+    padding-right: 30px;
+  }
+  .header .links {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header .mobile-links {
+    display: none;
+  }
 }
 
 .home {
-  height: 40vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,11 +332,19 @@
 }
 
 .home h1 {
-  color: red;
   font-size: 40px;
+  text-align: center;
+  line-height: 1.3;
+  margin: 0 0 50px 0;
+  font-weight: 700;
 }
 
-.team {
+.home .imac {
+  width: 95vw;
+  margin: 20px 0;
+}
+
+.home .team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,8 +352,9 @@
       justify-content: space-around;
 }
 
-.team div {
+.home .team div {
   width: 30vw;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,36 +370,39 @@
           align-items: center;
 }
 
-.team img {
-  height: 15vh;
+.home .team img {
+  height: 30vh;
   border-radius: 10%;
+  margin: 15px;
 }
 
-.team h2 {
+.home .team h2 {
   font-size: 30px;
   margin: 10px;
 }
 
-.team p {
+.home .team p {
   font-size: 20px;
 }
 
 .resume img {
   height: 70vh;
+  -webkit-box-shadow: -10px -10px 25px gray;
+          box-shadow: -10px -10px 25px gray;
 }
 
 body {
-  background-image: url("./../components/Home/Background.jpeg");
-  background-color: rgba(128, 128, 128, 0.356);
+  background-color: rgba(255, 255, 255, 0.356);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 30px;
-  font-weight: 700;
-  color: white;
+  color: black;
 }
 
 .App {
@@ -230,7 +411,8 @@ body {
 
 .routes {
   margin: 12vh 0 0 0;
-  position: absolute;
+  position: relative;
+  overflow: scroll;
   height: 83vh;
   width: 100vw;
   display: -webkit-box;

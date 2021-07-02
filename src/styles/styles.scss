@@ -7,8 +7,8 @@
 
 body {
 	// ! Background
-	background-image: url("./../components/Home/Background.jpeg");
-	background-color: rgba(128, 128, 128, 0.356);
+	// background-image: url("./../components/Home/Background.jpeg");
+	background-color: rgba(255, 255, 255, 0.356);
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -16,10 +16,12 @@ body {
 	background-attachment: fixed;
 
 	// ! Font
-	font-family: 'Courier New', Courier, monospace;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	font-size: 30px;
-	font-weight: 700;
-	color: white;
+	// font-weight: 700;
+	color: black;
 }
 
 .App {
@@ -28,8 +30,9 @@ body {
 
 .routes {
 	margin: 12vh 0 0 0;
+	position: relative;
+	overflow: scroll;
 	// z-index: -1;
-	position: absolute;
 	height: 83vh;
 	width: 100vw;
 	display: flex;
