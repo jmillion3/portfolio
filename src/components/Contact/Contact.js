@@ -1,46 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-require('dotenv').config();
+// import secret from '../../'
 
-const {YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, YOUR_USER_ID} = process.env
-// console.log(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, YOUR_USER_ID)
-
-
-const Contact = () => {
+function Contact() {
+    const [env, setEnv] = useState([]);
     
+    // componentDidMount(env, setEnv){
+    //     axios.get('/contact')
+    //     .then(res => this.setEnv({env: res.data}))
+    //     .catch(err => console.log(err));
+    // }
+
     function sendEmail(e) {
         e.preventDefault();
-    
 
-    emailjs.sendForm(`${YOUR_SERVICE_ID}`, `${YOUR_TEMPLATE_ID}`, e.target, `${YOUR_USER_ID}`)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
     }
-    
 
-        return <div className="contact">
-            <address>
-                Email: <a href="mailto:joshsmiller1022@gmail.com?subject=I just saw your portfolio">joshsmiller1022@gmail.com</a>
-                <br></br>
-                Contact me on Linkedin: <a href="https://www.linkedin.com/in/joshua-s-miller/" target="_blank" rel="noreferrer noopener">Josh Miller</a>
-                <br></br>
-                Contact me on Discord: <br></br>Josh Miller#6247
-            </address>
-            <div className="form">
-                <form className="contact-form" onSubmit={sendEmail}>
-                    <h2>CONTACT</h2>
-                    <input type="text" id="name" placeholder="Name"/>
-                    <input type="email" id="email" placeholder="Email"/>
-                    <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea>
-                    <input type="submit" className="submit" value="Send Message"></input>
-                </form>
-            </div>
-        </div>
-    
+    return (
+        <form className="contact" onSubmit={sendEmail}>
+        <input type="hidden" name="contact_number" />
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+        </form>
+    );
 }
 
 export default Contact;

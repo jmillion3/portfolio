@@ -33,7 +33,7 @@ const Code = () => {
                 <div className="tech">
                     <p><FaReact/> React</p>
                     <p><FaNodeJs/> Node</p>
-                    <p><FaSass/> Sass</p>
+                    <p><FaCss3Alt/> CSS</p>
                 </div>
             </div>
             <a href="https://github.com/jmillion3/noDB"><img src={screen} alt="Screen Time"></img></a>
