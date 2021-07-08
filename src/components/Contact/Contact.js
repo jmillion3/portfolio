@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import emailjs from 'emailjs-com';
-// import secret from '../../'
+import secret from '../../secret';
+// console.log(secret)
 
-function Contact() {
-    const [env, setEnv] = useState([]);
-    
-    // componentDidMount(env, setEnv){
-    //     axios.get('/contact')
-    //     .then(res => this.setEnv({env: res.data}))
-    //     .catch(err => console.log(err));
-    // }
+const Contact = () => {
 
-    function sendEmail(e) {
+    const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+        emailjs.sendForm(secret.SERVICE_ID, secret.TEMPLATE_ID, e.target, secret.USER_ID)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -23,16 +16,36 @@ function Contact() {
     }
 
     return (
-        <form className="contact" onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number" />
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-        </form>
+        <div className="contact">
+            <div className="status-bar">
+                <p>
+                    <span className="one">Status</span>
+                    <br></br>
+                    <span className="two">Available</span>
+                    <br></br>
+                    <span className="three">I'm currently taking on new projects!</span>
+                </p>
+            </div>
+
+            <form className="contact-form" onSubmit={sendEmail}>
+                <input type="hidden" name="contact_number" />
+                <div className="form-top">
+                    <div className="form-item">
+                        <label>Name</label>
+                        <input type="text" name="user_name" />
+                    </div>
+                    <div className="form-item">
+                        <label>Email</label>
+                        <input type="email" name="user_email" />
+                    </div>
+                </div>
+                <div className="form-item form-full">
+                    <label>How can I help?</label>
+                    <textarea name="message" />
+                </div>
+                <input className="submitBtn" type="submit" value="Send Message" />
+            </form>
+        </div>
     );
 }
 

@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const emailCtrl = require('./emailController');
+// const emailCtrl = require('./emailController');
 
 const app = express();
 
@@ -11,6 +11,6 @@ const {SERVER_PORT} = process.env;
 app.use(express.json());
 
 // endpoints
-app.get('/contact', emailCtrl.getEnv);
+// app.get('/contact', emailCtrl.getEnv);
 
 app.listen(SERVER_PORT, () => console.log(`listening on port ${SERVER_PORT}`))
