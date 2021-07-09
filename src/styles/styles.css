@@ -171,6 +171,10 @@
   font-size: 1.5em;
 }
 
+.contact .status-bar p .three {
+  text-align: center;
+}
+
 .contact .contact-form {
   height: 30vh;
   width: 88vw;
@@ -241,6 +245,22 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media screen and (max-width: 700px) {
+  .contact .contact-form input {
+    font-size: 10px;
+  }
+  .contact .contact-form label {
+    font-size: 20px;
+    margin: .5em 0;
+  }
+  .contact .contact-form .submitBtn {
+    font-size: .5em;
+    padding: 3px;
+    margin: .5em 0 0 .5em;
+    width: 120px;
+  }
 }
 
 .footer {
@@ -380,6 +400,25 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .header .hamburger {
+    display: inline-block;
+    padding-right: 30px;
+  }
+  .header .links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header .logo {
+    margin-left: 10px;
+  }
+  .header .logo p {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .header .mobile-links {
     display: none;
@@ -442,10 +481,16 @@
           align-items: center;
 }
 
-.home .team img {
-  height: 30vh;
-  border-radius: 10%;
-  margin: 15px;
+.home .team .images {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.home .team .images img {
+  height: 400px;
 }
 
 .home .team h2 {
@@ -457,6 +502,61 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 1100px) {
+  .home .team h2 {
+    font-size: 25px;
+    margin: 5px;
+  }
+  .home .team p {
+    font-size: 15px;
+  }
+  .home .team .images {
+    width: 200px;
+    height: 200px;
+  }
+  .home .team .images img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home h1 {
+    font-size: 25px;
+  }
+  .home .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home .team div {
+    height: 25vh;
+  }
+  .team .member {
+    text-align: center;
+  }
+  .team .member h2 {
+    width: 80vw;
+  }
+  .team .member .images {
+    width: 100px;
+    height: 100px;
+  }
+  .team .member .images img {
+    height: 200px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
 .resume img {
   height: 70vh;
   -webkit-box-shadow: -10px -10px 25px gray;

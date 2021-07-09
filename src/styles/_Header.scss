@@ -85,6 +85,23 @@
 			display: none;
 		}
 	}
+	@media screen and (max-width: 900px) {
+		.hamburger {
+			display: inline-block;
+			padding-right: 30px;
+		}
+		.links {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.logo {
+			margin-left: 10px;
+		}
+		.logo p {
+			display: none;
+		}
+	}
 	@media screen and (min-width: 900px) {
 		.mobile-links {
 			display: none;

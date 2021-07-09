@@ -31,11 +31,15 @@
 			justify-content: center;
 			align-items: center;
 		}
-
-		img {
-			height: 30vh;
-			border-radius: 10%;
-			margin: 15px;
+		.images {
+			overflow: hidden;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			text-align: center;
+			img {
+				height: 400px;
+			}
 		}
 
 		h2 {
@@ -47,4 +51,51 @@
 			font-size: 20px;
 		}
 	}
+	@media screen and (max-width: 1100px) {
+		.team {
+			h2 {
+				font-size: 25px;
+				margin: 5px;
+			}
+			p {
+				font-size: 15px;
+			}
+		}
+		.team .images {
+			width: 200px;
+			height: 200px;
+		}
+		.team .images img {
+			height: 300px;
+		}
+	}
 }
+
+@media screen and (max-width: 600px) {
+	.home h1 {
+		font-size: 25px;
+	}
+	.home .team {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		div {
+			height: 25vh;
+		}
+	}
+	.team .member {
+		text-align: center;
+		h2 {
+			width: 80vw;
+		}
+	}
+	.team .member .images {
+		width: 100px;
+		height: 100px;
+	}
+	.team .member .images img {
+		height: 200px;
+	}
+}
+/* On screens that are 600px or less, set the background color to olive */

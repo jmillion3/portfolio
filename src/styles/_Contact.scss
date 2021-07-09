@@ -36,6 +36,9 @@
 			font-weight: 900;
 			font-size: 1.5em;
 		}
+		.three {
+			text-align: center;
+		}
 	}
 	.contact-form {
 		height: 30vh;
@@ -86,5 +89,23 @@
 	.form-top {
 		display: flex;
 		justify-content: space-evenly;
+	}
+}
+
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 700px) {
+	.contact .contact-form input {
+		font-size: 10px;
+	}
+	.contact .contact-form label {
+		font-size: 20px;
+		margin: .5em 0;
+	}
+	.contact .contact-form .submitBtn {
+		font-size: .5em;
+		padding: 3px;
+		margin: .5em 0 0 .5em;
+		width: 120px;
 	}
 }
