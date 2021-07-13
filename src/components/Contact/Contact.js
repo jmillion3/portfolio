@@ -32,18 +32,18 @@ const Contact = () => {
                 <div className="form-top">
                     <div className="form-item">
                         <label>Name</label>
-                        <input type="text" name="user_name" />
+                        <input className="input-box" type="text" name="user_name" />
                     </div>
                     <div className="form-item">
                         <label>Email</label>
-                        <input type="email" name="user_email" />
+                        <input className="input-box" type="email" name="user_email" />
                     </div>
                 </div>
                 <div className="form-item form-full">
                     <label>How can I help?</label>
                     <textarea name="message" />
-                </div>
                 <input className="submitBtn" type="submit" value="Send Message" />
+                </div>
             </form>
         </div>
     );

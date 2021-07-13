@@ -16,7 +16,7 @@ const Code = () => {
         <div className="sweeet">
             <div className="details">
                 <h2>Sweeet</h2>
-                <p>An ecommerce candy store.</p>
+                <h3>An ecommerce candy store.</h3>
                 <div className="tech">
                     <p><FaReact/> React</p>
                     <p><FaNodeJs/> Node</p>
@@ -29,7 +29,7 @@ const Code = () => {
         <div className="screenTime">
             <div className="details">
                 <h2>Screen Time</h2>
-                <p>A simple time tracking app focused on managing daily technology usage.</p>
+                <h3>A simple time tracking app.</h3>
                 <div className="tech">
                     <p><FaReact/> React</p>
                     <p><FaNodeJs/> Node</p>
@@ -41,7 +41,7 @@ const Code = () => {
         <div className="hevy">
             <div className="details">
                 <h2>HEVY</h2>
-                <p>A web design company.</p>
+                <h3>A web design company.</h3>
                 <div className="tech">
                     <p><FaHtml5/> HTML</p>
                     <p><FaCss3Alt/> CSS</p>

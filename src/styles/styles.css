@@ -20,9 +20,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -37,7 +36,7 @@
 }
 
 .code h1 {
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
 }
 
@@ -55,16 +54,24 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 20vw;
 }
 
 .code .details h2 {
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.code .details h3 {
+  color: #585858;
+  font-size: 20px;
 }
 
 .code .details p {
   color: #585858;
+  font-size: 25px;
 }
 
 .code .details .tech {
@@ -167,6 +174,8 @@
 
 .contact .status-bar p .two {
   color: green;
+  text-transform: uppercase;
+  letter-spacing: 4px;
   font-weight: 900;
   font-size: 1.5em;
 }
@@ -176,9 +185,10 @@
 }
 
 .contact .contact-form {
-  height: 30vh;
+  height: 35vh;
   width: 88vw;
-  padding: 5%;
+  margin: 3%;
+  padding: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,10 +202,12 @@
 
 .contact .contact-form label {
   margin-bottom: .5em;
+  width: 50%;
 }
 
 .contact .contact-form textarea {
-  height: 100px;
+  height: 150px;
+  width: 47%;
   background-color: #f6f6f6;
   border-width: 2px;
   border-radius: 6px;
@@ -206,10 +218,16 @@
   border-radius: 6px;
 }
 
+.contact .contact-form .input-box {
+  width: 20vw;
+  height: 2vh;
+}
+
 .contact .contact-form .submitBtn {
   width: 20vw;
   padding: 10px;
-  background-color: green;
+  margin-top: 15px;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 1000px;
@@ -218,8 +236,8 @@
 
 .contact .submitBtn:hover {
   background-color: white;
-  color: green;
-  border: solid 1px green;
+  color: black;
+  border: solid 1px black;
 }
 
 .contact .form-item {
@@ -234,7 +252,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-transform: uppercase;
-  width: 100%;
   margin-left: 10px;
 }
 
@@ -242,9 +259,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .form-full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -343,10 +375,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 0 20px;
 }
 
 .header .logo p {
-  font-size: 40px;
+  font-size: 30px;
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
 }
 
 .header .hamburger {
@@ -442,6 +477,17 @@
           align-items: center;
 }
 
+.home > p {
+  color: white;
+  background-color: black;
+  width: 95%;
+  padding: 40px;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
 .home h1 {
   font-size: 40px;
   text-align: center;
@@ -452,7 +498,7 @@
 
 .home .imac {
   width: 95vw;
-  margin: 20px 0;
+  margin: 20px 0 70px 0;
 }
 
 .home .team {
@@ -465,7 +511,7 @@
 
 .home .team div {
   width: 30vw;
-  margin: 10px 0 0 0;
+  margin: 30px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,10 +542,12 @@
 .home .team h2 {
   font-size: 30px;
   margin: 10px;
+  text-transform: uppercase;
 }
 
 .home .team p {
-  font-size: 20px;
+  font-size: 17px;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -511,7 +559,7 @@
     margin: 5px;
   }
   .home .team p {
-    font-size: 15px;
+    font-size: 12px;
   }
   .home .team .images {
     width: 250px;
@@ -563,8 +611,8 @@
 /* On screens that are 600px or less, set the background color to olive */
 .resume img {
   height: 70vh;
-  -webkit-box-shadow: -10px -10px 25px gray;
-          box-shadow: -10px -10px 25px gray;
+  -webkit-box-shadow: 10px 10px 25px gray;
+          box-shadow: 10px 10px 25px gray;
 }
 
 body {
